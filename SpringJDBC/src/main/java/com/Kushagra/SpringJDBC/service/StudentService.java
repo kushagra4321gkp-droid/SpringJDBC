@@ -1,7 +1,7 @@
 package com.Kushagra.SpringJDBC.service;
 
-import com.Kushagra.SpringJDBC.StudentRepo;
 import com.Kushagra.SpringJDBC.model.Student;
+import com.Kushagra.SpringJDBC.repo.StudentRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -21,9 +21,9 @@ public class StudentService {
         this.repo = repo;
     }
 
-    public void addStudent() {
+    public void addStudent(Student s) {
 //        System.out.println("Student added using Service");
-        repo.save();
+        repo.save(s);
     }
 
     public List<Student> getStudent() {
