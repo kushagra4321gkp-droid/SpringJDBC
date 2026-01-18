@@ -1,4 +1,4 @@
-package com.Kushagra.SpringJDBC;
+package com.Kushagra.SpringJDBC.model;
 
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;

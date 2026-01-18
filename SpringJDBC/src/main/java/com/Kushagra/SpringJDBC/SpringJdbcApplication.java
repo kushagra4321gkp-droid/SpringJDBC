@@ -1,8 +1,12 @@
 package com.Kushagra.SpringJDBC;
 
+import com.Kushagra.SpringJDBC.model.Student;
+import com.Kushagra.SpringJDBC.service.StudentService;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
+
+import java.util.List;
 
 @SpringBootApplication
 public class SpringJdbcApplication {
@@ -16,7 +20,11 @@ public class SpringJdbcApplication {
 		s.setMarks(98);
 		s.setRollNo(30);
 
-		System.out.println(s);
+		StudentService service = context.getBean(StudentService.class);
+		service.addStudent();
+
+		List<Student> student = service.getStudent();
+		System.out.println(student);
 	}
 
 }
